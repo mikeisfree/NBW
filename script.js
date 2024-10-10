@@ -1,4 +1,4 @@
-import { interiors } from "https://webzone404.com/NBW/data.js";
+import { interiors } from "./data.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   const cursor = document.querySelector(".cursor"); // Corrected querySelector

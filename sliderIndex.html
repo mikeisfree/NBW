@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SliderRotating</title>
+    <link rel="stylesheet" href="https://webzone404.com/NBW/style.css" />
+  </head>
+
+  <header></header>
+  <body>
+    <img src="https://webzone404.com/NBW/img/wheel2.png" class="bw" alt="" />
+
+    <div class="cursor"></div>
+
+    <nav>
+      <a href="#">Webzone</a>
+      <p>Check works</p>
+    </nav>
+
+    <footer>
+      <div class="links">
+        <a href="#">Webzone</a>
+        <a href="#">Webzone</a>
+        <a href="#">Webzone</a>
+      </div>
+      <p>Lorem ipsum dolor sit.</p>
+    </footer>
+
+    <div class="container">
+      <h1>
+        Miejsce na Twoje linki<br />
+        Youtube, Instagram...
+      </h1>
+      <div class="gallery"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script type="module" src="./data.js"></script>
+    <script type="module" src="./script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.to(".bw", {
+        rotation: 360,
+        scrollTrigger: {
+          trigger: ".scroll-container",
+          start: "top top",
+          end: "bottom top",
+          scrub: true, // Smoothly animate on scroll
+          markers: true, // Optional: display markers for debugging
+        },
+      });
+    </script>
+  </body>
+</html>
